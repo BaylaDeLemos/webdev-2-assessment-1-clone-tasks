@@ -1,0 +1,393 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap');
+
+/* Set default styles for all elements */
+:root {
+    /* Specified Spacings */
+    --small: 16px;
+    --mobile: 16px;
+    --tablet: 32px;
+    --desktop: 48px;
+
+    /* Main Colors */
+    --primary-color: #231651;
+    --secondary-color: #4DCCBD;
+    --btn-color: #EEF36A;
+    --btn-hover-color: #D4E500;
+    --btn-text-hover-color: #070410;
+}
+
+/* General reset and theme colors */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #ffffff;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: var(--primary-color);
+    padding: var(--desktop) var(--small);
+    box-shadow: 10px 10px var(--secondary-color);
+}
+
+.nav-bar h1 {
+    color: white;
+    font-family: "Teko", sans-serif;
+    font-size: 3em;
+    transition: color 0.3s;
+}
+
+.nav-bar h1:hover {
+    color: #4DCCBD;
+}
+
+.nav-list ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin: 0 var(--desktop);
+}
+
+.nav-list a {
+    color: white;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #4DCCBD;
+}
+
+.nav-bar button {
+    background-color: var(--btn-color);
+    color: var(--primary-color);
+    padding: var(--small);
+    border: none;
+    border-radius: 5px;
+    font-family: "Teko", sans-serif;
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-bar button:hover {
+    background-color: var(--btn-hover-color);
+    color: var(--btn-text-hover-color);
+}
+
+/* Movie Container */
+/* Grids */
+.movie-container {
+    display: grid;
+    /* Defines specific areas in the grid, assigning names to grid items */
+    grid-template-areas:
+        "movieCardOne movieCardOne"
+        "movieCardTwo movieCardThree"
+        "movieCardFour movieCardFour"
+        "movieCardFive movieCardFive"
+        "movieCardSix movieCardSix";
+    grid-template-columns: 1fr 1fr;
+    width: 900px;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+img {
+    border: var(--primary-color) 5px solid;
+}
+
+/* Movie Cards */
+/* Uses flexbox to arrange child elements within this element */
+/* Sets the flex direction to column, so child elements stack vertically */
+.movie-card-one {
+    grid-area: movieCardOne;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    margin: var(--desktop) 0;
+}
+
+/* Film Card One */
+.movie-card-one img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.movie-text-one {
+    padding: var(--small);
+    color: white;
+    display: flex;
+    gap: var(--small);
+}
+
+/* Film Card Two and Three */
+.movie-card-two {
+    grid-area: movieCardTwo;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    width: 420px;
+}
+
+.movie-card-three {
+    grid-area: movieCardThree;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    width: 420px;
+    margin-left: auto;
+}
+
+.movie-card-two,
+.movie-card-three {
+    margin-bottom: var(--desktop);
+}
+
+.movie-card-two img,
+.movie-card-three img {
+    width: 420px;
+    height: 420px;
+}
+
+.movie-text-two,
+.movie-text-three {
+    padding: var(--small);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-text-two button {
+    margin-top: var(--small);
+}
+
+.movie-text-three button {
+    margin-top: 45px;
+}
+
+/* Film Card Four and Five */
+.movie-card-four {
+    grid-area: movieCardFour;
+    display: flex;
+    background-color: var(--primary-color);
+    margin-bottom: var(--desktop);
+}
+
+.movie-card-four img,
+.movie-card-five img,
+.movie-card-six img {
+    width: 420px;
+    height: 100%;
+}
+
+.movie-text-four {
+    padding: var(--small);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movie-card-five {
+    grid-area: movieCardFive;
+    display: flex;
+    background-color: var(--primary-color);
+    margin-bottom: var(--desktop);
+}
+
+/* Movie Card Six */
+.movie-card-six {
+    grid-area: movieCardSix;
+    display: flex;
+    background-color: var(--primary-color);
+    margin-bottom: var(--desktop);
+}
+
+/* Movie Card Styles */
+.movie-card-one,
+.movie-card-two,
+.movie-card-three,
+.movie-card-four,
+.movie-card-five,
+.movie-card-six {
+    box-shadow: 10px 10px var(--secondary-color);
+}
+
+/* Movie Card Buttons */
+button {
+    background-color: var(--btn-color);
+    color: var(--primary-color);
+    padding: var(--small) var(--desktop);
+    border: none;
+    border-radius: 5px;
+    font-family: "Teko", sans-serif;
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: var(--btn-hover-color);
+    color: var(--btn-text-hover-color);
+}
+
+/* Media Queries */
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    .nav-bar {
+        margin-bottom: var(--tablet);
+    }
+
+    .nav-list li {
+        margin: 0 var(--small);
+    }
+
+    .movie-container {
+        grid-template-areas:
+            "movieCardOne movieCardTwo"
+            "movieCardThree movieCardFour"
+            "movieCardFive movieCardSix";
+        width: 670px;
+        margin: 0 auto;
+        grid-row-gap: var(--tablet);
+    }
+
+    .movie-card-one,
+    .movie-card-two,
+    .movie-card-three,
+    .movie-card-four,
+    .movie-card-five,
+    .movie-card-six {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: auto;
+        height: 100%;
+    }
+
+    .movie-card-one img,
+    .movie-card-two img,
+    .movie-card-three img,
+    .movie-card-four img,
+    .movie-card-five img,
+    .movie-card-six img {
+        width: 300px;
+        height: 100%;
+    }
+
+    .movie-text-one,
+    .movie-text-two,
+    .movie-text-three,
+    .movie-text-four {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .movie-card-one button {
+        margin-top: 63px;
+    }
+    .movie-card-two button,
+    .movie-card-three button,
+    .movie-card-four button,
+    .movie-card-five button,
+    .movie-card-six button {
+        margin-top: var(--tablet);
+    }
+
+    .movie-card-two button {
+        margin-top: 48px;
+    }
+
+    .movie-card-three button {
+        margin-top: 90px;
+    }
+
+    .movie-card-five button {
+        margin-top: 119px;
+    }
+
+    body {
+        padding-bottom: var(--tablet);
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 720px) {
+    .nav-bar {
+        margin-bottom: var(--mobile);
+        box-shadow: none;
+    }
+
+    .nav-bar h1 {
+        font-size: 2em;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .movie-container {
+        grid-template-areas:
+            "movieCardOne"
+            "movieCardTwo"
+            "movieCardThree"
+            "movieCardFour"
+            "movieCardFive"
+            "movieCardSix";
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        grid-row-gap: var(--mobile);
+    }
+
+    .movie-card-one,
+    .movie-card-two,
+    .movie-card-three,
+    .movie-card-four,
+    .movie-card-five,
+    .movie-card-six {
+        width: 360px;
+    }
+
+    .movie-card-one img,
+    .movie-card-two img,
+    .movie-card-three img,
+    .movie-card-four img,
+    .movie-card-five img,
+    .movie-card-six img {
+        width: 360px;
+    }
+
+    .movie-card-one,
+    .movie-card-two,
+    .movie-card-three,
+    .movie-card-four,
+    .movie-card-five,
+    .movie-card-six {
+        box-shadow: none;
+    }
+
+    body {
+        padding-bottom: 0;
+    }
+}
