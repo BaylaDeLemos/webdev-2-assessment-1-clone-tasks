@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://logosandtypes.com/wp-content/uploads/2023/03/walt-disney.svg">
+    <title>Flexbox Task</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="disney.png" alt="Logo" style="width: 100px; height: 100px;">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#card">Card</a></li>
+                <li><a href="#image">Image</a></li>
+                <li><a href="#quiz">Q&A</a></li>
+                <li><a href="#todo">List</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- card design -->
+    <section id="card">
+    <h1>Card Design</h1>
+    <div class="card-container">
+        <div class="card">
+            <img src="encanto.jpg" alt="Card Image">
+            <h3>Encanto</h3>
+            <p>"Encanto" follows the Madrigal family, who each possess magical gifts, as they navigate family expectations and self-acceptance.</p>
+            <a href="#" class="btn">Watch</a>
+        </div>
+
+        <div class="card">
+            <img src="elemental.jpg" alt="Card Image">
+            <h3>Elemental</h3>
+            <p>
+                "Elemental" explores a city where fire, water, land, and air residents navigate their differences and discover love amidst contrasting elements.</p>
+            <a href="#" class="btn">Watch</a>
+        </div>
+
+        <div class="card">
+            <img src="frozen.jpg" alt="Card Image">
+            <h3>Frozen II</h3>
+            <p>"Frozen 2" follows Elsa, Anna, Kristoff, and Olaf as they journey to uncover the origins of Elsa's powers and save their threatened kingdom.</p>
+            <a href="#" class="btn">Watch</a>
+        </div>
+
+        <div class="card">
+            <img src="coco.jpg" alt="Card Image">
+            <h3>Coco</h3>
+            <p>"Coco" follows young Miguel as he ventures into the Land of the Dead to uncover his family's musical legacy and connect with his ancestors.</p>
+            <a href="#" class="btn">Watch</a>
+        </div>
+    </div>
+    </section>
+    <!-- image gallery -->
+    <section id="image">
+        <h1>Image Gallery</h1>
+         <div class="gallery">
+            <img src="cook.jpeg" alt="">
+            <img src="tianaplace.jpeg" alt="">
+            <img src="chef.jpeg" alt="">
+            <img src="boquet.jpeg" alt="">
+         </div>
+    </section>
+
+    <!-- q&a -->
+    <section id="quiz">
+        <div class="quiz-container">
+            <h1>Disney Quiz</h1>
+            <div id="quiz">
+                <div class="question">
+                    <h2>1. What is the name of Mickey Mouse's dog?</h2>
+                    <label class="answer"><input type="radio" name="q1" value="incorrect">Goofy</label>
+                    <label class="answer"><input type="radio" name="q1" value="correct">Pluto</label>
+                    <label class="answer"><input type="radio" name="q1" value="incorrect">Donald</label>
+                </div>
+    
+                <div class="question">
+                    <h2>2. Which Disney movie features the song "Let It Go"?</h2>
+                    <label class="answer"><input type="radio" name="q2" value="incorrect">Tangled</label>
+                    <label class="answer"><input type="radio" name="q2" value="correct">Frozen</label>
+                    <label class="answer"><input type="radio" name="q2" value="incorrect">Moana</label>
+                </div>
+    
+                <div class="question">
+                    <h2>3. What is Simba's father's name in The Lion King?</h2>
+                    <label class="answer"><input type="radio" name="q3" value="correct">Mufasa</label>
+                    <label class="answer"><input type="radio" name="q3" value="incorrect">Scar</label>
+                    <label class="answer"><input type="radio" name="q3" value="incorrect">Zazu</label>
+                </div>
+                <button onclick="checkAnswers()">Submit</button>
+            </div>
+            <div id="result"></div>
+        </div>
+        <script src="script.js"></script>
+    </section>
+
+    <section id="todo">
+        <div class="todo-container">
+            <h1>Cinderella's To-Do List</h1>
+            <ul id="todo-list">
+                <li>
+                    <input type="checkbox" id="task1">
+                    <label for="task1">Sweep the floor</label>
+                    <button class="delete-btn" onclick="deleteTask(this)">Delete</button>
+                </li>
+                <li>
+                    <input type="checkbox" id="task2">
+                    <label for="task2">Wash the dishes</label>
+                    <button class="delete-btn" onclick="deleteTask(this)">Delete</button>
+                </li>
+                <li>
+                    <input type="checkbox" id="task3">
+                    <label for="task3">Feed the animals</label>
+                    <button class="delete-btn" onclick="deleteTask(this)">Delete</button>
+                </li>
+                <li>
+                    <input type="checkbox" id="task4">
+                    <label for="task4">Prepare the royal banquet</label>
+                    <button class="delete-btn" onclick="deleteTask(this)">Delete</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>

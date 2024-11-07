@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fffcf4;
+}
+
+h1 {
+    color: #142878;
+    margin: 20px;
+    padding: 5px;
+    text-align: center;
+}
+
+/** navbar **/
+header {
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+}
+
+.logo a {
+    padding: 10px;
+    margin: 0px;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    color: #142878;
+}
+
+.nav-links a:hover {
+    transition: 0.5s;
+    color: #ecbd00;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: #142878;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/** card design **/
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fdf7dc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 15px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    margin: 15px 0;
+    font-size: 1.5rem;
+}
+
+.card p {
+    padding: 0 15px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.card .btn {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background-color: #fee686;
+    color: #0056b3;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.card .btn:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/** image gallery **/
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.gallery img {
+    flex-wrap: wrap;
+    width: 320px;
+    height: 450px;
+    margin: 12px 0;
+}
+
+/** quiz **/
+.quiz-container {
+    padding: 20px;
+    margin: 10px;
+    background-color: #0057b33a;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-container h1 {
+    margin: 20px;
+    padding: 5px;
+    text-align: center;
+    color: #142878;
+    font-size: 2rem;
+}
+
+.question {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.question h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+.answer {
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.answer:hover {
+    background-color: #0057b33a;
+    color: rgb(0, 80, 160);
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #142878;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #142878;
+}
+
+/** todo list **/
+.todo-container h1 {
+    border-bottom: 2px solid #ff6b81;
+}
+
+.todo-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px;
+    background-color: #0057b315;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-container li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    margin-left: 30px;
+    transform: scale(1.2);
+}
+
+label {
+    flex-grow: 1;
+    text-align: left;
+    margin-right: 10px;
+    color: #004d40;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.delete-btn {
+    background-color: #404b76;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #0086c3;
+}
