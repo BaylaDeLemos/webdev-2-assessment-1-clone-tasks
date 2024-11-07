@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Protest+Guerrilla&display=swap');
+/* Import Google Fonts */
+
+/* Set default styles for all elements */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+  /* Set font */
+  font-size: 16px;
+}
+
+/* Body */
+body {
+  background-color: #e9e9e9;
+}
+
+/* Header */
+header {
+  display: flex;
+  /* Use flexbox layout */
+  flex-direction: column;
+  /* Stack items vertically */
+  align-items: center;
+}
+
+/* Logo image */
+.logo {
+  margin-top: 50px;
+  width: 200px;
+}
+
+/* Navigation menu */
+nav ul {
+  display: flex;
+  list-style: none;
+
+}
+
+nav li {
+  margin: 50px 125px;
+}
+
+nav li a {
+  color: black;
+}
+
+nav li a:hover {
+  text-decoration: underline;
+}
+
+/* Main content area */
+main {
+  background-color: white;
+  width: 1024px;
+  margin: 0 auto;
+}
+
+/* Heading */
+h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-family: "Protest Guerrilla", sans-serif;
+}
+
+/* About section */
+.about {
+  padding: 0 50px;
+  padding-top: 50px;
+}
+
+.title {
+  font-size: 135px;
+  line-height: 100px;
+  font-family: "Protest Guerrilla", sans-serif;
+  margin-bottom: 12px;
+}
+
+.about h2 {
+  padding-top: 10px;
+  /* Add top padding to h2 in about section */
+}
+
+.about-description {
+  width: 800px;
+  margin-bottom: 20px;
+}
+
+.about-description p {
+  font-size: 24px;
+}
+
+/* Content heading */
+.heading {
+  column-count: 3;
+  padding: 0 50px;
+}
+
+.heading-content {
+  padding-top: 20px;
+}
+
+/* Album section */
+.album-section {
+  display: grid;
+  grid-template-areas:
+    "photoOne photoTwo photoThree"
+    "photoOne photoFour photoFive";
+  grid-template-columns: 1fr 25% 25%;
+  margin: 50px 0;
+}
+
+.album-section>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.album-photo {
+  grid-area: photoOne;
+}
+
+/* Author section */
+.author-section {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  padding-bottom: 50px;
+  gap: 50px;
+}
+
+.author-profile h2 {
+  text-align: center;
+}
+
+.author-picture img {
+  width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #14181d;
+  color: white;
+  padding: 50px;
+  width: 1024px;
+  margin: 0 auto;
+}
+
+/* For Tablet */
+@media screen and (max-width: 1024px) {
+  .logo {
+    width: 80px;
+    margin-top: 30px;
+  }
+
+  nav li {
+    margin: 30px 60px;
+  }
+
+  main {
+    width: 540px;
+  }
+
+  h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: "Protest Guerrilla", sans-serif;
+    text-align: center;
+  }
+
+  .about {
+    padding: 0 30px;
+    padding-top: 30px;
+  }
+
+  .title {
+    margin-bottom: 0;
+    font-size: 48px;
+    font-family: "Protest Guerrilla", sans-serif;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .about h2 {
+    text-align: center;
+    padding-top: 0;
+  }
+
+  .about-description {
+    width: 480px;
+    margin-bottom: 20px;
+  }
+
+  .about-description p {
+    font-size: 18px;
+  }
+
+  .heading {
+    column-count: 1;
+    padding: 0 30px;
+  }
+
+  .heading-content {
+    padding-top: 20px;
+  }
+
+  .album-photo {
+    display: none;
+  }
+
+  .album-section {
+    grid-template-areas:
+      "photoTwo photoThree"
+      "photoFour photoFive";
+    grid-template-columns: 1fr 50%;
+    margin: 30px 0;
+  }
+
+  .album-section>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .author-section {
+    padding: 0 30px;
+    padding-bottom: 30px;
+  }
+
+  footer {
+    padding: 30px;
+    width: 540px;
+  }
+}
+
+/* For large mobile */
+@media screen and (max-width: 720px) {
+  .logo {
+    width: 80px;
+    margin-top: 20px;
+  }
+
+  nav li {
+    margin: 20px 50px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .about {
+    padding: 0 20px;
+    padding-top: 20px;
+  }
+
+  .about-description {
+    width: 100%;
+  }
+
+  .heading {
+    padding: 0 20px;
+    /* Adjust padding for content heading */
+  }
+
+  .album-section {
+    grid-template-areas:
+      "photoTwo"
+      "photoThree"
+      "photoFour"
+      "photoFive";
+    grid-template-columns: 100%;
+  }
+
+  .author-section {
+    flex-direction: column-reverse;
+    padding: 0 20px;
+    padding-bottom: 20px;
+  }
+
+  footer {
+    padding: 20px;
+    width: 100%;
+  }
+}
+
+/* For small mobile */
+@media screen and (max-width: 540px) {
+  .logo {
+    width: 80px;
+    margin-top: 12px;
+  }
+
+  nav li {
+    margin: 15px 20px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .about {
+    padding: 0 10px;
+  }
+
+  .about-description {
+    width: 100%;
+  }
+
+  .heading-content {
+    padding: 0 10px;
+  }
+
+  .album-section {
+    grid-template-areas:
+      "photoTwo"
+      "photoThree"
+      "photoFour"
+      "photoFive";
+    grid-template-columns: 100%;
+  }
+
+  .author-section {
+    flex-direction: column-reverse;
+    padding: 0 10px;
+  }
+
+  .author-profile {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  footer {
+    padding: 10px;
+    width: 100%;
+  }
+}
